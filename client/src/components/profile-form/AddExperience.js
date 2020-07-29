@@ -68,14 +68,18 @@ const AddExperience = ({ addExperience, history }) => {
         </div>
         <div className="form-group">
           <h4>From Date</h4>
-          <input type="date" name="from" />
+          <input
+            type="date"
+            name="from"
+            value={from}
+            onChange={(e) => onChange(e)}
+          />
         </div>
         <div className="form-group">
           <p>
             <input
               type="checkbox"
               name="current"
-              value=""
               value={current}
               checked={current}
               onChange={(e) => {
